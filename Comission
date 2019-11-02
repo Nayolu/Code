@@ -1,0 +1,55 @@
+function solve(input){
+    let city = input.shift();
+    let s = Number(input.shift());
+    switch (city){
+        case 'Sofia' :
+            if (s >= 0 && s <= 500){
+                console.log(`${(s * (5/100)).toFixed(2)}`)
+            }
+            else if (s > 500 && s <= 1000){
+                console.log(`${(s * (7/100)).toFixed(2)}`)
+            }
+            else if (s > 1000 && s <= 10000){
+                console.log(`${(s * (8/100)).toFixed(2)}`)
+            }
+            else if (s > 10000){
+                console.log(`${(s * (12/100)).toFixed(2)}`)
+            }
+            else {
+                console.log('error');
+            };break;
+        case 'Varna' :
+            if (s >= 0 && s <= 500){
+                console.log(`${(s * (4.5/100)).toFixed(2)}`) 
+            }
+            else if (s > 500 && s <= 1000){
+                console.log(`${(s * (7.5/100)).toFixed(2)}`)
+            }
+            else if (s > 1000 && s <= 10000){
+                console.log(`${(s * (10/100)).toFixed(2)}`)
+            }
+            else if (s > 10000){
+                console.log(`${(s * (13/100)).toFixed(2)}`)
+                }
+            else {
+                console.log('error');
+            };break;
+        case 'Plovdiv' :
+            if (s >= 0 && s <= 500){
+                console.log(`${(s * (5.5/100)).toFixed(2)}`)
+            }
+            else if (s > 500 && s <= 1000){
+                console.log(`${(s * (8/100)).toFixed(2)}`)
+            }
+            else if (s > 1000 && s <= 10000){
+                console.log(`${(s * (12/100)).toFixed(2)}`)
+            }
+            else if (s > 10000){
+                console.log(`${(s * (14.5/100)).toFixed(2)}`)
+            }
+            else {
+                console.log('error');
+            };break;
+        default : console.log('error');
+    }   
+}
