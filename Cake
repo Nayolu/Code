@@ -1,0 +1,27 @@
+function solve(input){
+    let a = Number(input.shift());
+    let b = Number(input.shift());
+    let cake = a * b;
+    let total = 0;
+    while (true){
+        let count = input.shift();
+        if (count == 'Stop'){
+            console.log(`${cake - total} pieces are left.`);
+            break;
+        }
+        else {
+            total += count;
+            if (total > cake){
+                console.log(`No more cake left! You need ${total - cake} pieces more.`)
+                break;
+            }
+        }
+    }
+}
+solve([10,
+    10,
+    20,
+    20,
+    20,
+    20,
+    21])
